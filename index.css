@@ -1,3 +1,9 @@
 body {
     text-align: center;
 }
+
+header {
+    color: blue;
+    background-color: grey;
+    border-radius: 20px;
+}

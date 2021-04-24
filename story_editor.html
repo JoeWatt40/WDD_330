@@ -9,19 +9,15 @@
 
 <body>
 
-    <h1>Story Editor</h1>
+    <h1>Add this weeks assignment</h1>
 
-    Story Name:<input id=name_input></input>
+    Week Number:<input id=name_input></input>
 
     <section>
-        <button onclick="loadStory()">Find an Edit It</button>
-        <button onclick="saveStory()">Save it</button>
-        <button onclick="displayStory()">Display It</button>  
-    </section>
-
-    <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
-
-    <section id="story_display"></section> 
+        <textarea id="story_editor"></textarea>
+    </section>    
+   
+    <button onclick="newWeek()">Enter</button>  
 
     <script src="/story.js"></script>
     

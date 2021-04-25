@@ -1,11 +1,16 @@
 body {
     text-align: center;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
 }
 
 ol {
     list-style-position: inside;
 }
 
-a:link {
-    text-decoration: none;
+ul, ol {
+    padding: 0px;
 }

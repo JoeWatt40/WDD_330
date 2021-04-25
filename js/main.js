@@ -11,8 +11,10 @@ var links = [
 
 for(i = 0; i < links.length; i++) {
     var list = document.getElementById("list")
-    var newItem = document.createElement('li')
-    var x = document.createElement('a')
+    var newItem = document.createElement("li")
+    var x = document.createElement("a")
     list.appendChild(newItem)
-    newItem.innerHTML = links[i]["label"]
+    newItem.appendChild(x)
+    x.href = links[i]["url"]
+    x.innerHTML = links[i]["label"]   
 }

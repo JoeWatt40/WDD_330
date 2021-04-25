@@ -1,13 +1,5 @@
-body {
-    text-align: center;
-}
-
-section {
-    padding: 10px;
-}
-
 textarea {
-    width: 400px;
-    height: 200px;
-    background-color: lightgrey;
+    width: 800px;
+    height: 250px;
+    background-color: lightyellow;
 }

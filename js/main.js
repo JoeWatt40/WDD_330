@@ -9,7 +9,7 @@ var links = [
     }
   ]       
 
-for(i = 0; i < links.length; i++) {
+for (i = 0; i < links.length; i++) {
     var list = document.getElementById("list")
     var newItem = document.createElement("li")
     var x = document.createElement("a")

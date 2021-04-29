@@ -15,3 +15,15 @@ function loadInput(){
     
     document.getElementById("display").innerHTML = total;
 }
+
+function addNumbers() {
+    let numberOne = parseInt(document.getElementById("addInput1").value);
+    let numberTwo = parseInt(document.getElementById("addInput2").value);
+    let total;
+
+    if (!isNaN(numberOne) && !isNaN(numberTwo)){
+        total = (numberOne + numberTwo);
+    }   
+    
+    document.getElementById("totalNumber").innerHTML = total;
+}

@@ -1,1 +1,0 @@
-addEventListener('touched', () => console.log("touched"));

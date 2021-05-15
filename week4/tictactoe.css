@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+th {
+    border: 2px solid black;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+#one, 
+#two,
+#four,
+#five {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#three,
+#six {
+    border-bottom: 2px solid black;
+}
+
+#seven, 
+#eight {
+    border-right: 2px solid black;
+}
+
+div > *:hover {
+    background-color: lightgray;
+}
+

@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+ul, ol {
+    padding: 0px;
+}
+
+div, ol {
+    text-align: left;
+}
+
+div, ul, ol {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+a:link {
+    text-decoration: none;
+}

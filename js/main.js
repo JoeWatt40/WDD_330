@@ -14,6 +14,10 @@ var links = [
     {
         label : "Week 4 Assignment",
         url : "week4/index.html"
+    },
+    {
+        label : "Week 5 Assignment",
+        url : "week5/index.html"
     }
   ]       
 

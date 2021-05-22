@@ -2,10 +2,11 @@ $default-font-color: #000;
 $background-color: #4a90e2;
 $container-bgcolor: #f2f2f2;
 $container-bordercolor: #000;
-$textbox-bordercolor: lightgray;
+$textbox-bordercolor: #d3d3d3;
 $button-textcolor: #fff;
 $button-hovercolor: #000;
-$add-button-color: #9f6060;
+$add-button-color: #4caf50;
+$clear-button-color: #9f6060;
 
 @mixin mp($size) {
     @media only screen and (min-width: $size) { 
@@ -16,7 +17,7 @@ $add-button-color: #9f6060;
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 html,

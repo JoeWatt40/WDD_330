@@ -1,9 +1,38 @@
 body {
     text-align: center;
+    background-color: lightblue;
+}
+
+header, main {
+    background-color: lightgray;
+}
+
+header {
+    border-bottom: 2px solid darkblue;
+}
+
+h1 {
+    margin: 0px;
+    padding: 10px;
 }
 
 ol {
     list-style-position: inside;
+    padding: 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px;
+}
+
+li {
+    height: 50px;
+    font-size: 25px;
+}
+
+a:hover {
+    font-size: 30px;
+    color: red;
 }
 
 a:link {

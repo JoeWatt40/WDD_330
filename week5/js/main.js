@@ -2,7 +2,7 @@ import ToDoList from "./todolist.js";
 import ToDoItem from "./todoitem.js";
 
 const toDoList = new ToDoList();
-
+console.log("HI");
 //will start app
 document.addEventListener("readystatechange", (event) => {
     if (event.target.readyState === "complete") {

@@ -114,6 +114,10 @@ function renderOneHikeLight(hike) {
             <h3>Difficulty</h3>
             <p>${hike.difficulty}</p>
         </div>
+        <div>
+            <h3>Comments</h3>
+            <p>${hike.difficulty}</p>
+        </div>
 </div>`;
 
   return item;
@@ -139,6 +143,10 @@ function renderOneHikeFull(hike) {
         <div>
             <h3>How to get there</h3>
             <p>${hike.directions}</p>
+        </div>
+        <div>
+            <h3>Comments</h3>
+            <p>${hike.difficulty}</p>
         </div>
     
     `;

@@ -1,17 +1,23 @@
-class Comment {
+class CommentModel {
     constructor(type) {
         this.type = type;
         //get list of comments
         this.comments = readFromLS(this.type) || [];
     }
 
+    getComments(q = null) {
+        if (q === null) {
+            return this.comments;
+        } else {
+            return this.comments.filter(el => el.name === q);
+        }
+
     addComment(postName, comment) {
         const newComment = {
-            name: hikeName,
-            date: new Date(),
-            content: comment
+            name: postName,
+            comment: comment,
+            date: new Date()            
         };
-
         this.comments.push(newComment);
         writeToLS(this.type, this.comments);
     }

@@ -11,6 +11,7 @@ class CommentModel {
         } else {
             return this.comments.filter(el => el.name === q);
         }
+    }
 
     addComment(postName, comment) {
         const newComment = {
@@ -20,7 +21,8 @@ class CommentModel {
         };
         this.comments.push(newComment);
         writeToLS(this.type, this.comments);
-    }
+        }
+}
 
     //writes to local storage
     function writeToLS(key, data) {
@@ -32,20 +34,13 @@ class CommentModel {
         return JSON.parse(window.localStorage.getItem(key));
     }
 
-    const commentUI = '<div class="addComment">'
-    '<h2>Add Comment</h2>'
-    '<input type="text" id="commentEntry"/>'
-    '<button id="commentSubmit">Comment</button>'
-    '</div>'
-    '<h2>Comments</h2>'
-    '<ul class="comments"></ul>';
+    const commentUI = `<div class="addComment"><h2>Add Comment</h2><input type="text" id="commentEntry"/><button id="commentSubmit">Comment</button></div><h2>Comments</h2><ul class="comments"></ul>`;
 
     function renderCommentList(element, comments) {
         element.innerHTML = '';
         comments.forEach(el => {
             let item = document.createElement('li');
-            item.innerHTML = '${el.name}: ${el.comment}';
-
+            item.innerHTML = `${el.name}: ${el.comment}`;
             element.appendChild(item);
         });
     }
@@ -86,12 +81,10 @@ class CommentModel {
                     comments = [];
                 }
                 renderCommentList(parent.lastChild, comments);
-            } catch (error) {
+            } 
+            catch (error) {
                 console.log(error);
             }
         }
     }
-}
-    
-
 export default Comments;

@@ -25,6 +25,33 @@ ol {
     padding: 50px;
 }
 
+.flex li a{
+    transition: transform 3s ease-out 3s;
+}
+
+.flex li:hover,
+.flex a:hover {
+    color: green;
+}
+
+
+header {
+    animation-duration: 2s;
+    animation-name: appearDisappear;
+    animation-iteration-count: 5;
+    animation-direction: alternate;
+}
+
+@keyframes appearDisappear { 
+    from { 
+        font-size: 20px
+    }
+    to {
+        font-size: 25px;
+    } 
+}
+
+
 li {
     height: 50px;
     font-size: 25px;
@@ -32,7 +59,6 @@ li {
 
 a:hover {
     font-size: 30px;
-    color: red;
 }
 
 a:link {

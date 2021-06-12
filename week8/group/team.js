@@ -1,5 +1,5 @@
 //variable containing url request
-const requestURL = "https://swapi.dev/api/";
+const requestURL = "https://swapi.dev/api/people";
 
 //fetch request from URL
 fetch(requestURL)
@@ -9,8 +9,7 @@ fetch(requestURL)
             var list = document.getElementById("list")
             Object.keys(data).forEach(function (key, index){
                 var newItem = document.createElement("option")
-                // console.log(newItem)
-                console.log(key)
+                console.log(list)
                 newItem.textContent = key
                 newItem.value = data[key]
                 list.appendChild(newItem)
@@ -20,13 +19,16 @@ fetch(requestURL)
     })
 
 function getEnd(event){
-    alert(event.target.value)
+    alert(event.target)
     fetch(requestURL)
     .then(response => response.json())
     .then(data => {
+        console.log(data.results[0].name)
         if (data != undefined){
             var list = document.getElementById("result")
             list.value = JSON.stringify(data)
+            // var lists = document.getElementById("result")
+            // lists.data.results[0].name = JSON.stringify(data)
         } 
     })
 }

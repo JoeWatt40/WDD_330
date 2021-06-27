@@ -9,10 +9,7 @@ export default class QuakesController {
     // sometimes the DOM won't exist/be ready when the Class gets instantiated, so we will set this later in the init()
     this.parentElement = null;
     // let's give ourselves the option of using a location other than the current location by passing it in.
-    this.position = position || {
-      lat: 0,
-      lon: 0
-    };
+    this.position = position || { lat: 0, lon: 0 };
     // this is how our controller will know about the model and view...we add them right into the class as members.
     this.quakes = new Quake();
     this.quakesView = new QuakesView();
@@ -28,9 +25,10 @@ export default class QuakesController {
     if (this.position.lat === 0) {
       try {
         // try to get the position using getLocation()
-        
+        const posFull = await getLocation();
         // if we get the location back then set the latitude and longitude into this.position
-        
+        this.position.lat = posFull.coords.latitude;
+        this.position.lon = posFull.coords.longitude;
       } catch (error) {
         console.log(error);
       }
@@ -40,12 +38,9 @@ export default class QuakesController {
   async getQuakesByRadius(radius = 100) {
     // this method provides the glue between the model and view. Notice it first goes out and requests the appropriate data from the model, then it passes it to the view to be rendered.
     //set loading message
-    this.parentElement.innerHTML = 'Loading...';
+    this.parentElement.innerHTML = '<li>Loading...</li>';
     // get the list of quakes in the specified radius of the location
-    const quakeList = await this.quakes.getEarthQuakesByRadius(
-      this.position,
-      100
-    );
+    const quakeList = await this.quakes.getEarthQuakesByRadius(this.position, 100);
     // render the list to html
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
     // add a listener to the new list of quakes to allow drill down in to the details
@@ -55,6 +50,7 @@ export default class QuakesController {
   }
   async getQuakeDetails(quakeId) {
     // get the details for the quakeId provided from the model, then send them to the view to be displayed
-   
+    const quake = this.quakes.getQuakeById(quakeId);
+    this.quakesView.renderQuake(quake, this.parentElement);
   }
 }

@@ -1,4 +1,4 @@
-import { getJSON } from 'utilites.js';
+import { getJSON } from "./utilites.js";
 
 // Quake Model
 export default class Quake {

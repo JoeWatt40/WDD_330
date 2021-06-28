@@ -13,7 +13,7 @@
       
       listElement.innerHTML = quakeList.features
       .map(quake => {
-        return `<li data-id=${quake.id}>${quake.properties.title} <div>${new Date(quake.properties.time )}</div></li>`;
+        return `<li>${quake.properties.title} ${new Date(quake.properties.time )}</li>`;
       })
       .join('');
     }

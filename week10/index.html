@@ -20,16 +20,21 @@
 
     <h3>Questions</h3>
     <ol>
-        <li>
+        <li>Is there a point where we are asking for to much information to be validated on a form?</li>
+        <hr>
+        <li>Could it be possible to cause problems with the server when were asking for a lot of variables
+            in the form input to be validated?
         </li>
     </ol>   
+
     <h3>NOTES</h3>
     <div>
         <p>You can set patterns, length, amount of inputs needed in the "input" element.</p>
         <p>Server side validation is important to protect your site for security reasons. It need to be used
             along side client side validation.</p>
-        <p></p>
-        <p></p>
+        <p>You can update JSON data in a fetch request by updating the body using JSON stringify: "body:JSON.stringify(data)"</p>
+        <p>To check if a fetch was a succes you need to check that the promise was resolved then use
+            the "Response.ok"</p>
     </div>
 
 </body>

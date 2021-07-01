@@ -1,22 +1,22 @@
-export const { makeRequest };
+export async function makeRequest()
 
 // server url
-const baseURL = 'http://127.0.0.1:3000/';
+// const baseURL = 'http://127.0.0.1:3000/';
 
 // function to get the url
-function getJSON(url) {
-    return fetch(url)
-      .then(function(response) {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        } else {
-          return response.json();
-        }
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  }
+// function getJSON(url) {
+//     return fetch(url)
+//       .then(function(response) {
+//         if (!response.ok) {
+//           throw Error(response.statusText);
+//         } else {
+//           return response.json();
+//         }
+//       })
+//       .catch(function(error) {
+//         console.log(error);
+//       });
+//   }
 
 //helper function using fetch for http request
 async function makeRequest(url, method = 'GET', body = null) {

@@ -1,0 +1,13 @@
+body {
+    background-image: url("download.jpg");
+    color: white;
+}
+
+header, main {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+main {
+    font-size: 1.25em;
+}

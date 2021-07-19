@@ -17,16 +17,15 @@ fetch(url)
     })
 
 function getEnd(){
-    console.log("in get end");
-    // fetch(url)
-    // .then(response => response.json())
-    // .then(data => {
-    //     console.log(data.results[0].name)
-    //     if (data != undefined){
-    //         var list = document.getElementById("result")
-    //         list.value = JSON.stringify(data)
-    //         // var lists = document.getElementById("result")
-    //         // lists.data.results[0].name = JSON.stringify(data)
-    //     } 
-    // })
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data[0].name)
+        if (data != undefined){
+            var list = document.getElementById("result")
+            list.value = JSON.stringify(data)
+            // var lists = document.getElementById("result")
+            // lists.data.results[0].name = JSON.stringify(data)
+        } 
+    })
 }

@@ -23,12 +23,10 @@ function getEnd(event){
     fetch(requestURL)
     .then(response => response.json())
     .then(data => {
-        console.log(data.results[0].name)
+        console.log(data[0].name)
         if (data != undefined){
             var list = document.getElementById("result")
-            list.value = JSON.stringify(data)
-            // var lists = document.getElementById("result")
-            // lists.data.results[0].name = JSON.stringify(data)
+            list.value = JSON.stringify(data)           
         } 
     })
 }

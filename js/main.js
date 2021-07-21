@@ -46,6 +46,10 @@ var links = [
     {
         label: "Project Proposal",
         url : "project/proposal.html"
+    },
+    {
+        label: "Final Project",
+        url : "project/index.html"
     }
   ]       
 

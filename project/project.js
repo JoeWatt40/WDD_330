@@ -4,6 +4,7 @@ fetch(url)
     .then(response => response.json())
     .then(data => {
         if (data != undefined){
+            console.log(data);
             var list = document.getElementById("list")
             Object.keys(data).forEach(function (key, index){
                 var newItem = document.createElement("option")
@@ -15,19 +16,30 @@ fetch(url)
     })
 
 function getEnd(){
-    const  displayCharacter = document.getElementById("list").selectedIndex - 1; 
+    const  index = document.getElementById("list").selectedIndex - 1; 
     // const y = document.getElementById("list").options;
-    // console.log(y[x].text);
+    
     fetch(url)
     .then(response => response.json())
     .then(data => {
         if (data != undefined){
-            var list = document.getElementById("result");
-            var newItem = document.createElement("p");
-            console.log(list);
-            console.log(newItem);
-            list.appendChild(newItem);
-            list.innerHTML = "hi";
+            for (i=0; i < data.length; i++){
+                var list = document.getElementById("result");
+                var newItem = document.createElement("p");
+                list.appendChild(newItem);
+                list.innerHTML = "Actor Name: " + data[index]["name"];
+                list.innerHTML += "\n";
+                list.innerHTML += "House: " + data[index]["house"];
+                var x = document.createElement("a");
+                newItem.appendChild(x);
+                x.href += data[index]["image"];
+            }
+            // var list = document.getElementById("result");
+            // var newItem = document.createElement("p");
+            // list.appendChild(newItem);
+            // list.innerHTML = data[index].actor;
+            
+            // list.innerHTML = data[index].actor;
             // newItem.appendChild(x)
             //  for (i=0; i < data.length - 1; i++){
             //      console.log(data[i]);

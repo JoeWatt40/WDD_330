@@ -59,7 +59,7 @@ for (i = 0; i < links.length; i++) {
     var x = document.createElement("a")
     list.appendChild(newItem)
     newItem.appendChild(x)
-    x.href = links[i]["url"]
-    x.innerHTML = links[i]["label"]   
+    x.href += links[i]["url"]
+    x.innerHTML += links[i]["label"]   
 }
 

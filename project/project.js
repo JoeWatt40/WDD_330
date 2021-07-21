@@ -30,40 +30,11 @@ function getEnd(){
                 list.innerHTML = "Actor Name: " + data[index]["name"];
                 list.innerHTML += "\n";
                 list.innerHTML += "House: " + data[index]["house"];
-                var x = document.createElement("a");
-                newItem.appendChild(x);
+                list.innerHTML += "\n";
+                list.innerHTML += data[index]["image"];
                 x.href += data[index]["image"];
-            }
-            // var list = document.getElementById("result");
-            // var newItem = document.createElement("p");
-            // list.appendChild(newItem);
-            // list.innerHTML = data[index].actor;
-            
-            // list.innerHTML = data[index].actor;
-            // newItem.appendChild(x)
-            //  for (i=0; i < data.length - 1; i++){
-            //      console.log(data[i]);
-            //  }
-            // var list = document.getElementById("list");
-            // var newItem = document.createElement("p");
-            // newItem.innerHTML = y[x].text;
-           
-            // for (i = 0; i < data.length; i++) {
-            //     var list = document.getElementById("list")
-            //     var newItem = document.createElement("p")
-            //     console.log(newItem);
-            //     // var x = document.createElement("a")
-            //     list.appendChild(newItem)
-            //     // newItem.appendChild(x)
-            //     // x.href = links[i]["url"]
-            //     // x.innerHTML = links[i]["label"]   
-            // }
-            // console.log(x);
-            // var list = document.getElementById("result")
-            // // for(i = 0; i < data.length; i++){
-            // //     list.value = JSON.stringify(data[i].name)
-            // // }  
-            // list.value = (y[x].text);          
+            }        
+                    
         } 
     })
 }

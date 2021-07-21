@@ -27,7 +27,7 @@ function getEnd(){
             console.log(list);
             console.log(newItem);
             list.appendChild(newItem);
-           
+            list.innerHTML = "hi";
             // newItem.appendChild(x)
             //  for (i=0; i < data.length - 1; i++){
             //      console.log(data[i]);
@@ -35,7 +35,7 @@ function getEnd(){
             // var list = document.getElementById("list");
             // var newItem = document.createElement("p");
             // newItem.innerHTML = y[x].text;
-            // console.log(newItem);
+           
             // for (i = 0; i < data.length; i++) {
             //     var list = document.getElementById("list")
             //     var newItem = document.createElement("p")
